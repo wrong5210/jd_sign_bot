@@ -22,7 +22,7 @@ jobs:
                 node-version: '12.x'
             - name: Run app
               run: npm install
-            - run: node app.js
+            - run: node jd_bean_change_app.js
               env:
                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
                 JD_COOKIE_2: ${{ secrets.JD_COOKIE_2 }} 
