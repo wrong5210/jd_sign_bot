@@ -1,4 +1,4 @@
-name: Github JD-sign bot
+name: Github jd_bean_change bot
 
 on:
     push:
