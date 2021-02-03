@@ -16,7 +16,7 @@ jobs:
       - name: Checkout github_lxk0301_jd_scripts
         uses: actions/checkout@v2
         with:
-          repository: liuning0307/lxk0301
+          repository: wrong5210/jd_sign_bot
           ref: master
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
