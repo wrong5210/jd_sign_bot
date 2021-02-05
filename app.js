@@ -10,6 +10,8 @@ const download = require('download');
 // 公共变量
 const KEY = process.env.JD_COOKIE;
 const serverJ = process.env.PUSH_KEY;
+const serverJ = process.env.TG_BOT_TOKEN;
+const serverJ = process.env.TG_USER_ID;
 const DualKey = process.env.JD_COOKIE_2;
 
 
