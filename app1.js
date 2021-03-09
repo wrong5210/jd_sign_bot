@@ -11,8 +11,7 @@ const download = require('download');
 const KEY = process.env.JD_COOKIE;
 const serverJ = process.env.PUSH_KEY;
 const DualKey = process.env.JD_COOKIE_2;
-const TG_BOT_TOKEN = process.env.TG_BOT_TOKEN;
-const TG_USER_ID = process.env.TG_USER_ID;
+const BARK_PUSH = process.env.BARK_PUSH;
 
 
 async function downFile () {
@@ -59,9 +58,7 @@ async function start() {
   await exec("node JD_DailyBonus.js >> result.txt");
   console.log('执行完毕')
 
- 
-    
-    if (serverJ) {
+  if (serverJ) {
     const path = "./result.txt";
     let content = "";
     if (fs.existsSync(path)) {
@@ -72,8 +69,8 @@ async function start() {
     let t2 = content.match(/【签到奖励】:((.|\n)*)【其他奖励】/)
     let res2 = t2 ? t2[1].replace(/\n/,'') : '总计0'
     
-    if (TG_BOT_TOKEN && TG_USER_ID) {
-    const path = "./result.txt";
+  if (BARK_PUSH) {
+    const path = "https://api.day.app/jP9VY2xjmhZaxr7rbo8hBm/result.txt";
     let content = "";
     if (fs.existsSync(path)) {
       content = fs.readFileSync(path, "utf8");
